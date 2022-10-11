@@ -6,7 +6,7 @@ const refs = {
 
 
 refs.increaseBtn.addEventListener('click', onIncreaseNumber);
-refs.decreaseBtn.removeEventListener('click', onDecreaseNumber);
+refs.decreaseBtn.addEventListener('click', onDecreaseNumber);
 
 let counterValue = 0;
 
