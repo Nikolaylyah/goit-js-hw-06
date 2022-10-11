@@ -19,4 +19,5 @@ function onIncreaseNumber () {
 function onDecreaseNumber () {
 
     counterValue -= 1;
+    refs.output.textContent = counterValue;
 }
