@@ -13,11 +13,12 @@ const images = [
   },
 ];
 
-const galleryAdd = document.querySelector('.gallery');
+const galleryRef = document.querySelector('.gallery');
 
-images.forEach(image => {
-  let urlAdd = image.url;
-  let altAdd = image.alt;
-  galleryAdd.insertAdjacentHTML('beforeend', 
-  `<li class="gallery__styles"><img class="images__styles" src =${urlAdd} alt =${altAdd}</li>`);
-});
+const markup = images.map(item => {
+  return `<li class = "three__task-li">
+    <img src="${item.url}" class = "three__task-image" alt="${item.alt}"/>
+  </li>`;
+}).join('');
+console.log(markup);
+galleryRef.insertAdjacentHTML('beforeend', markup);

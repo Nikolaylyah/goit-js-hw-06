@@ -24,10 +24,10 @@ button {
 }
 
 
-.gallery__styles {
-  display: flex;
+.three__task-image {
+  width: 400px;
 }
-
-.images__styles{
-  width: 140px;
+.three__task-li {
+  display: flex;
+  margin: 10px;
 }
