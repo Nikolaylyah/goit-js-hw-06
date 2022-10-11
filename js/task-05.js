@@ -7,7 +7,7 @@ correctInput.filledInput.addEventListener('input', onInputChange);
 
 
 function onInputChange() {
-    if(filledInput === null){
+    if(filledInput === ""){
         emptyInput.textContent("Anonymous");
     }
     emptyInput.textContent(filledInput);
