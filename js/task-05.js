@@ -6,10 +6,11 @@ const correctInput = {
 correctInput.filledInput.addEventListener('input', onInputChange);
 
 
-function onInputChange() {
-    if(filledInput === ""){
-        emptyInput.textContent("Anonymous");
+function onInputChange(event) {
+    correctInput.emptyInput.textContent = event.currentTarget.value;
+
+    if(event.currentTarget.value === ""){
+        emptyInput.textContent = 'Anonymous';
     }
-    emptyInput.textContent(filledInput);
 } 
      
