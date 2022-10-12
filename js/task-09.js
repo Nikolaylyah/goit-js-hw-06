@@ -6,7 +6,7 @@ const bodyColor = document.querySelector('.change-color');
 const colorSpan = document.querySelector('.color');
 const changeBodyColor = document.querySelector('body')
 
-bodyColor.addEventListener('click', ()=>getRandomHexColor());
+bodyColor.addEventListener('click', getRandomHexColor);
 
 function getRandomHexColor (event) {
 
