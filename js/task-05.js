@@ -10,7 +10,6 @@ function onInputChange(event) {
     correctInput.emptyInput.textContent = event.currentTarget.value;
 
     if(event.currentTarget.value === ""){
-        emptyInput.textContent = 'Anonymous';
+        correctInput.emptyInput.textContent = 'Anonymous';
     }
 } 
-     
