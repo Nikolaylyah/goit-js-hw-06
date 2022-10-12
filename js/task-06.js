@@ -1,7 +1,5 @@
 const refs = {
     validationInput: document.querySelector('[id="validation-input"]'),
-    validationInputColorValid: document.querySelector('#validation-input.valid'),
-    validationInputColorInValid: document.querySelector('#validation-input.invalid'),
     validationLength: document.querySelector('[data-length]')
 }
 
@@ -9,10 +7,18 @@ const refs = {
 refs.validationInput.addEventListener('blur', onInputBlur);
 
 
-function onInputBlur(event) {
-    refs.validationInput.textContent = event.currentTarget.value;
-    if (event.currentTarget.value === refs.validationLength.length) {
-        validationInputColorValid;
+
+function onInputBlur() {
+
+    let inputLength = refs.validationInput.value.length;
+
+    if (inputLength == refs.validationLength.dataset.length) {
+        refs.validationInput.classList.remove('invalid');
+        refs.validationInput.classList.add('valid');     
+
+    } else {
+        refs.validationInput.classList.remove('valid');
+        refs.validationInput.classList.add('invalid');
     }
-    validationInputColorInValid;
+    
 }
