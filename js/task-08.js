@@ -5,21 +5,32 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit (event) {
     event.preventDefault();
-    const formEl = event.currentTarget.elements;
+    // const formEl = event.currentTarget.elements;
 
-    const mail = formEl.email.value;
-    const password = formEl.password.value;
+    const {
+    elements: {email, password}
+    } = event.currentTarget;
 
-    const formData = {
-        mail, password
+
+    // const mail = formEl.email.value;
+    // const password = formEl.password.value;
+
+    // const formData = {
+    //     mail, password
+    // }
+
+    if (email.value === "" || password.value === "") {
+        return alert("Please fill in all the fields!");
     }
 
-    let message = "Enter your data please";
-    alert(message);
+    console.log(`Mail: ${email.value}, Password: ${password.value}`);
     
-    form.reset();
+    event.currentTarget.reset();
+
+   
+    // form.reset();
 
 
-    console.log(formData);
+    // console.log(formData);
 }
 
