@@ -14,15 +14,9 @@ function onFormSubmit (event) {
         mail, password
     }
 
-    let alert = prompt("Enter your data please");
-    let text;
-    if (alert == null || alert == "") {
-        text = "alert, enter your data";
-    } else {
-        text = "Thank's for register" + alert;
-    }
-
-
+    let message = "Enter your data please";
+    alert(message);
+    
     form.reset();
 
 
